@@ -1,7 +1,12 @@
 * {
-     box-sizing: border-box body {
-          background-color: #ffff;
-          padding: 0;
-          margin: 0;
+     box-sizing: border-box;
+}
+
+body {
+     padding: 0;
+     margin: 0;
+
+     #root {
+          padding: 45px 0 0 0;
      }
 }
