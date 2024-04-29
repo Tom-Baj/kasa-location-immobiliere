@@ -1,0 +1,28 @@
+.home-banniere {
+     position: relative;
+     height: 223px;
+     background-color: $black-color;
+     border-radius: $radius;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     h1 {
+          z-index: 1;
+          position: absolute;
+          color: $white-color;
+          @include drop-shadow(0, 4px, 4px, rgba(0, 0, 0, 0.25));
+          font-weight: $large;
+     }
+
+     img {
+          object-fit: cover;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          opacity: 60%;
+          top: 0;
+          left: 0;
+          border-radius: $radius;
+     }
+}
