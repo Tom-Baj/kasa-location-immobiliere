@@ -5,4 +5,8 @@ nav {
           text-decoration: none;
           color: $black-color;
      }
+
+     a:active {
+          text-decoration: underline;
+     }
 }

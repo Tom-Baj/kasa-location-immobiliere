@@ -1,16 +1,14 @@
-import logements from '../../assets/data/logements.json'
-
-function Card() {
+function Card({ logements }) {
      return (
-          <div className="logements">
+          <div className="logements-container">
                {logements.map((logement) => (
-                    <a href='#' className="card" key={logement.id} src={logement.cover}>
-                         <img className="card-image" src={logement.cover} alt={logement.title} />
-                         <h2 className="card-title">{logement.title}</h2>
-                    </a>
+                    <div className="card-content" key={logement.id}>
+                        <img className="card-image" src={logement.cover} alt={logement.title} />
+                        <div className="card-title">{logement.title}</div>
+                    </div>
                ))}
           </div>
-     )
+     );
 }
 
-export default Card
+export default Card;

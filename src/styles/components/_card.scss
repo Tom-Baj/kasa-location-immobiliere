@@ -1,9 +1,41 @@
-.card {
-     height: 340px;
-     width: 340px;
+.logements-container {
+     border-radius: $radius20;
+     background-color: $grey-color;
+     width: 1240px;
+     margin: $marge;
+     padding: 15px;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     flex-wrap: wrap;
 
-     .card-image {
-        width: 100%;
-        
+     .card-content {
+          position: relative;
+          width: 340px;
+          height: 340px;
+          margin: 5.5px;
+          overflow: hidden;
+
+          .card-image {
+               width: 100%;
+               height: 100%;
+               border-radius: $radius10;
+               object-fit: cover;
+          }
+
+          .card-title {
+               position: absolute;
+               bottom: 0;
+               left: 0;
+               width: 300px;
+               color: $white-color;
+               line-height: 25.67px;
+               font-size: 18px;
+               font-weight: $large;
+               padding: 10px;
+          }
+          .card-title:hover {
+               @include drop-shadow(0, 4px, 4px, rgba(0, 0, 0, 0.3));
+          }
      }
 }
