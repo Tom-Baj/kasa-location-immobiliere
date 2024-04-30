@@ -1,3 +1,10 @@
 @mixin drop-shadow($x: 0, $y: 4px, $blur: 4px, $color: rgba(0, 0, 0, 0.25)) {
      filter: drop-shadow($x $y $blur $color);
 }
+
+@mixin flex-center($direction) {
+     display: flex;
+     flex-direction: $direction;
+     justify-content: center;
+     align-items: center;
+}
