@@ -4,10 +4,26 @@
 
 body {
      padding: 0;
-     margin: auto;
-     
+     margin: 0 auto;
+     width: 100%;
+
      #root {
-          padding: 45px 0 0 0;
+          max-width: 1440px;
+          padding: 45px 100px;
           font-family: 'Montserrat', sans-serif;
+          margin: auto;
+
+          @media (max-width: 1024px) {
+               padding: 45px 70px;
+          }
+
+          @media (max-width: 768px) {
+               padding: 45px 50px;
+          }
+
+          @media (max-width: 375px) {
+               padding: 45px 20px;
+          }
+
      }
 }

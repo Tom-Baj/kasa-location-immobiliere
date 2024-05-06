@@ -1,24 +1,38 @@
 .logements-container {
-     border-radius: $radius20;
+     border-radius: $radius25;
      background-color: $grey-color;
-     width: 1240px;
-     margin: $marge;
      padding: 15px;
      display: flex;
      justify-content: space-around;
      align-items: center;
      flex-wrap: wrap;
+     margin: 50px 0;
+     width: 100%;
+     height: 100%;
 
      .card-content {
           position: relative;
-          width: 340px;
-          height: 340px;
-          margin: 5.5px;
-          overflow: hidden;
+          width: calc(33% - 20px);
+          height: 100%;
+          margin-bottom: 20px;
+          min-height: 255px;
+          object-fit: cover;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+
+          @media (max-width: 768px) {
+               width: calc(50% - 20px); // Plus large sur tablettes
+          }
+
+          @media (max-width: 576px) {
+               width: 100%; // Pleine largeur sur mobiles
+          }
 
           .card-image {
                width: 100%;
-               height: 100%;
+               height: 255px;
+
                border-radius: $radius10;
                object-fit: cover;
           }
@@ -27,10 +41,10 @@
                position: absolute;
                bottom: 0;
                left: 0;
-               width: 300px;
+               width: 100%;
                color: $white-color;
                line-height: 25.67px;
-               font-size: 18px;
+               font-size: 1em;
                font-weight: $large;
                padding: 10px;
           }

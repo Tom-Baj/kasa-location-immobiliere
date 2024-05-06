@@ -1,7 +1,16 @@
 .footer-container {
      background-color: $black-color;
      color: $white-color;
-     height: 209px;
      @include flex-center(column);
-    
+     width: 100vw;
+     position: absolute;
+     left: 0;
+
+     svg {
+          margin: 2.5rem 0 2.5rem 0;
+     }
+
+     p {
+          margin-bottom: 2.5rem;
+     }
 }

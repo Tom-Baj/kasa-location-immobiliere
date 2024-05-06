@@ -1,9 +1,13 @@
 nav {
-     display: flex;
+     @include flex-center(row);
      gap: 57px;
      a {
           text-decoration: none;
           color: $black-color;
+     }
+
+     @media (max-width: 1440px) {
+          gap: 26px;
      }
 
      a:active {
