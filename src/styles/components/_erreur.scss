@@ -1,0 +1,13 @@
+.container-erreur {
+     @include flex-center(column);
+     margin: 150px;
+
+
+     
+     .texte-erreur {
+          font-size: 36px;
+          font-weight: $medium;
+          color: $red-color;
+          margin: 100px 0;
+     }
+}
