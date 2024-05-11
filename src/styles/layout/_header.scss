@@ -6,12 +6,22 @@
     align-items: center;
     margin-bottom: 30px;
 
-    @media (max-width: 1440px) {
-        
-    }
+
 
     svg {
          height: 55px;
+    }
+
+    @media (max-width: 768px) {
+        svg {
+            width: 145px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        svg {
+            width: 145px;
+        }
     }
 }
 

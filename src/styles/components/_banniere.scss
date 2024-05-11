@@ -1,9 +1,11 @@
 .home-banniere {
      position: relative;
-     min-height: 223px;
      border-radius: $radius25;
      @include flex-center(column);
      margin: auto;
+     border: 1px solid rgba(0, 0, 0, 1);
+     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+     
 
      /*Couleur gris en background*/
      p {
@@ -24,6 +26,7 @@
           top: 0;
           left: 0;
           border-radius: $radius25;
+
      }
 
      .masque {
@@ -35,4 +38,44 @@
           height: 100%;
           border-radius: $radius25;
      }
+
+     @media screen and (max-width: 1024px) {
+          p {
+               font-size: 32px;
+               line-height: 24px;
+               padding: 20px 20px;
+          }
+
+          img {
+               height: 167px;
+          }
+          
+     } 
+
+     @media screen and (max-width: 768px) {
+          p {
+               font-size: 32px;
+               line-height: 24px;
+               padding: 20px 20px;
+          }
+
+          img {
+               height: 139px;
+          }
+          
+     }
+
+
+     @media screen and (max-width: 375px) {
+          p {
+               font-size: 32px;
+               line-height: 24px;
+               padding: 25px 25px;
+          }
+
+          img {
+               height: 111px;
+          }
+     }
+
 }

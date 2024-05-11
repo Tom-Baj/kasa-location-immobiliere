@@ -4,21 +4,37 @@
      align-content: center;
      flex-direction: column;
      gap: 30px;
-     width: calc(100% - 100px);
+     width: 80%;
      margin: 30px auto;
      position: relative;
 
      .menu-content {
           color: $white-color;
-          background: rgba(255, 96, 96, 1);
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          padding: 0 15px;
-          border-radius: $radius5;
           font-weight: $large;
+
+          .menu-header {
+               display: flex;
+               background-color: $red-color;
+               flex-direction: row;
+               justify-content: space-between;
+               align-items: center;
+               padding: 0 15px;
+               border-radius: $radius5;
+
+               .icon-fleche {
+                    transition: transform 0.9s;
+               }
+
+               .rotate-icon {
+                    transition: transform 0.9s;
+                    transform: rotate(180deg);
+               }
+          }
+          .zone-texte {
+               background-color: $grey-color;
+               color: $black-color;
+               font-weight: $light;
+               padding: 10px;
+          }
      }
-
-
 }
