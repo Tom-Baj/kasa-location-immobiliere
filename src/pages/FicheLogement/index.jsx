@@ -1,7 +1,10 @@
+import Carrousel from "../../components/Carrousel"
+import logements from "../../assets/data/logements.json"
+
 function FicheLogement() {
     return (
         <div>
-            <h1> Page de fiche logement 🏠</h1>
+            <Carrousel logements={logements}/>
         </div>
     )
 }
