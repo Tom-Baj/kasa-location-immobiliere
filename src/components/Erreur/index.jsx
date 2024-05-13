@@ -16,8 +16,8 @@ function Erreur() {
                     />
                </svg>
 
-               <p className="texte-erreur">Oups! La page que vous cherchez n'existe pas.</p>
-               <Link to="/home">Retourner sur la page d'acceuil</Link>
+               <p className="texte-erreur">Oups! La page que <span className='saut-de-ligne'> vous demandez n'existe pas.</span></p>
+               <Link to="/home" className='lien-erreur'>Retourner sur la page d'acceuil</Link>
           </div>
      )
 }
