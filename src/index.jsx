@@ -12,7 +12,7 @@ import Apropos from './pages/About/'
 ReactDOM.render(
      <React.StrictMode>
           <Router>
-          <Header />
+               <Header />
                <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/home" element={<Home />} />
@@ -20,7 +20,7 @@ ReactDOM.render(
                     <Route path="/about" element={<Apropos />} />
                     <Route path="*" element={<Error />} />
                </Routes>
-          <Footer />
+               <Footer />
           </Router>
      </React.StrictMode>,
      document.getElementById('root')

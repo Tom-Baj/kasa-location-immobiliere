@@ -54,7 +54,7 @@
 
      @media screen and (max-width: 768px) {
           p {
-               font-size: 32px;
+               font-size: 30px;
                line-height: 24px;
                padding: 20px 20px;
           }
@@ -65,12 +65,29 @@
           
      }
 
+     @media screen and (max-width: 425px) {
+          p {
+               font-size: 28px;
+               line-height: 24px;
+               padding: 20px 20px;
+
+            
+          }
+
+          img {
+               height: 125px;
+          }
+     }
 
      @media screen and (max-width: 375px) {
           p {
-               font-size: 32px;
+               font-size: 26px;
                line-height: 24px;
-               padding: 25px 25px;
+               padding: 0;
+
+               span {
+                    display: block;
+               }
           }
 
           img {
