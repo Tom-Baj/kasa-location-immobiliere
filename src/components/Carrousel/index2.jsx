@@ -17,7 +17,7 @@ function Carrousel({ logement }) {
      return (
           <div className="carrousel">
                <svg
-                    className={logement.pictures.length <= 1 ? "carrousel__fleche--hidden" : "carrousel__fleche carrousel__fleche--gauche"}
+                    className="carrousel__fleche carrousel__fleche--gauche"
                     width="48"
                     height="80"
                     viewBox="0 0 48 80"
@@ -31,20 +31,20 @@ function Carrousel({ logement }) {
                     />
                </svg>
                {logement.pictures.map((pictures, index) => (
-                    <div
+                    <img
                          key={index}
-                         style={{ backgroundImage: `url(${pictures})` }}
+                         src={pictures}
                          alt={logement.title}
                          className={
                               image === index
-                                   ? 'carrousel__image carrousel__image--visible'
+                                   ? 'carrousel__image'
                                    : 'carrousel__image carrousel__image--hidden'
                          }
                     />
                ))}
 
                <svg
-                    className={logement.pictures.length <= 1 ? "carrousel__fleche--hidden" : "carrousel__fleche carrousel__fleche--droite"}
+                    className="carrousel__fleche carrousel__fleche--droite"
                     width="48"
                     height="80"
                     viewBox="0 0 48 80"
@@ -58,7 +58,7 @@ function Carrousel({ logement }) {
                     />
                </svg>
 
-               <span className={logement.pictures.length > 1 ? "carrousel__indicateurs" : "carrousel__indicateurs--hidden"}>
+               <span className="carrousel__indicateurs">
                     <span
                          className={
                               image === 0
