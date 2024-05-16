@@ -7,7 +7,7 @@ function FicheLogement() {
      let logement = logements.find((logement) => logement.id === id)
 
      return (
-         <div>
+         <div id='fiche-logement'>
           <Carrousel logement={logement} />
          </div>
      );
