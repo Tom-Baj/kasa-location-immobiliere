@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 
 function Erreur() {
      return (
-          <div className="container-erreur">
-               <svg className="logo-erreur"
+          <div className="erreur-container">
+               <svg className="erreur-container__logo-404"
                     width="598"
                     height="263"
                     viewBox="0 0 598 263"
@@ -16,8 +16,8 @@ function Erreur() {
                     />
                </svg>
 
-               <p className="texte-erreur">Oups! La page que <span className='saut-de-ligne'> vous demandez n'existe pas.</span></p>
-               <Link to="/home" className='lien-erreur'>Retourner sur la page d'acceuil</Link>
+               <p className="erreur-container__texte">Oups! La page que <span className='erreur-container__texte--saut-de-ligne'> vous demandez n'existe pas.</span></p>
+               <Link to="/home" className='erreur-container__lien'>Retourner sur la page d'acceuil</Link>
           </div>
      )
 }

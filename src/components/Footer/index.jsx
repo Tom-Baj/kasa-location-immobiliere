@@ -2,6 +2,7 @@ function Footer() {
      return (
           <div className="footer-container">
                <svg
+                    className="footer-container__logo"
                     width="123"
                     height="41"
                     viewBox="0 0 123 41"
@@ -29,7 +30,7 @@ function Footer() {
                          fill="white"
                     />
                </svg>
-               <p className="texte-footer">© 2020 Kasa. All rights reserved</p>
+               <p className="footer-container__texte">© 2020 Kasa. All rights reserved</p>
           </div>
      )
 }

@@ -6,11 +6,11 @@
      position: absolute;
      left: 0;
 
-     svg {
+     &__logo {
           margin: 2.5rem 0 2.5rem 0;
      }
 
-     p {
+     &__texte {
           margin-bottom: 2.5rem;
      }
 }

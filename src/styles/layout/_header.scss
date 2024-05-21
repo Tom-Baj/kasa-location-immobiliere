@@ -1,27 +1,16 @@
 .header-container {
-    height: 68px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
+     height: 68px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 30px;
 
+     &__logo {
+          height: 55px;
 
-
-    svg {
-         height: 55px;
-    }
-
-    @media (max-width: 768px) {
-        svg {
-            width: 145px;
-        }
-    }
-
-    @media (max-width: 1024px) {
-        svg {
-            width: 145px;
-        }
-    }
+          @media (max-width: 1024px) {
+               width: 145px;
+          }
+     }
 }
-

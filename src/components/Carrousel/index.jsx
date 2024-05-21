@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 function Carrousel({ logement }) {
      const [image, setImage] = useState(0)
-     const [length, setLength] = useState(logement.pictures.length)
+     const [length] = useState(logement.pictures.length)
 
      const clickRetour = () => {
           const newIndex = image - 1

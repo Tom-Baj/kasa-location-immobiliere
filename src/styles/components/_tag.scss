@@ -1,0 +1,16 @@
+.tags-container {
+    display: flex;
+    justify-content: flex-start;
+
+    &__tag {
+        background-color: $red-color;
+        border-radius: $radius10;
+        color: $white-color;
+        font-size: 14px;
+        font-weight: $large;
+        margin-right: 5px;
+        padding: 5px 15px;
+        width: 115px;
+        text-align: center;
+    }
+}

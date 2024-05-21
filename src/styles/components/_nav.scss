@@ -1,18 +1,20 @@
-.liste-links {
-     @include flex-center(row);
+.nav-container {
+     @include flex-center(row); 
      gap: 57px;
      list-style-type: none;
-     a {
+     margin: 0;
+
+     &__link {
           text-decoration: none;
-          color: $black-color;
+          color: $black-color; 
 
           &.active {
                text-decoration: underline;
           }
      }
 
-     @media (max-width: 1440px) {
-          gap: 26px;
+     @media (max-width: 768px) {
+          gap: 18px;
      }
-
+     
 }

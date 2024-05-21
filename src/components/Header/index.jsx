@@ -2,8 +2,9 @@ import Nav from '../Nav'
 
 function Header() {
      return (
-          <div className='header-container'>
+          <div className="header-container">
                <svg
+                    className="header-container__logo"
                     width="211"
                     height="68"
                     viewBox="0 0 211 68"
@@ -31,7 +32,6 @@ function Header() {
                          fill="#FF6060"
                     />
                </svg>
-
                <Nav />
           </div>
      )

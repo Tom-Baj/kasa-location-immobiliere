@@ -1,0 +1,20 @@
+.description-container {
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     width: 100%;
+
+     &__titre {
+          font-size: 36px;
+          font-weight: $medium;
+          color: $red-color;
+          margin: 5px 0;
+     }
+
+     &__localisation {
+          font-size: 18px;
+          font-weight: $medium;
+          color: $black-color;
+          margin: 5px 0;
+     }
+}

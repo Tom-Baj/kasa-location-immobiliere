@@ -1,0 +1,21 @@
+.host-container {
+    display: flex;
+    align-items: center;
+    width: 167px;
+
+    &__name {
+        color: $red-color;
+        text-align: end;
+        font-size: 18px;
+        font-weight: $medium;
+        margin-right: 10px;
+
+    }
+
+    &__photo {
+        border-radius: 50%;
+        height: 64px;
+        
+    }
+
+}

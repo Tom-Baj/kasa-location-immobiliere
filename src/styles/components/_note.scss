@@ -1,0 +1,11 @@
+.note-container {
+    display: flex;
+
+    &__etoile-red {
+        color: $red-color;
+    }
+
+    &__etoile-grey {
+        color: $dark-grey-color;
+    }
+}
