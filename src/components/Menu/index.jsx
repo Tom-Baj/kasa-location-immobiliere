@@ -1,36 +1,38 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
-function Menu({ aboutLists }) {
+function Menu({ items, id }) {
      const [listeActive, setListeActive] = useState(null)
      return (
-          <div className="menu-container">
-               {aboutLists.map((aboutList) => (
-                    <div className="menu-content" key={aboutList.id}>
-                         <div className="menu-header">
-                              <p className="menu-titre">{aboutList.titre}</p>
-                              <span
-                                   className="menu-button"
-                                   onClick={() => {
-                                        setListeActive(
-                                             listeActive === aboutList.id ? null : aboutList.id
-                                        )
-                                   }}
-                              >
-                                   <i
-                                        className={`fa-solid fa-chevron-up icon-fleche ${
-                                             listeActive === aboutList.id ? 'rotate-icon' : ''
-                                        }`}
-                                   ></i>
-                              </span>
-                         </div>
-                         {listeActive === aboutList.id ? (
-                              <div className="zone-texte">
-                                   {' '}
-                                   <p className="menu-texte">{aboutList.texte}</p>
+          <div>
+               <div className={id === 'about' ? 'menu-container' : 'menu-container__logement'}>
+                    {items.map((item) => (
+                         <div className="menu-content" key={item.id}>
+                              <div className="menu-header">
+                                   <p className="menu-titre">{item.label}</p>
+                                   <span
+                                        className="menu-button"
+                                        onClick={() => {
+                                             setListeActive(
+                                                  listeActive === item.id ? null : item.id
+                                             )
+                                        }}
+                                   >
+                                        <i
+                                             className={`fa-solid fa-chevron-up icon-fleche ${
+                                                  listeActive === item.id ? 'rotate-icon' : ''
+                                             }`}
+                                        ></i>
+                                   </span>
                               </div>
-                         ) : null}
-                    </div>
-               ))}
+                              {listeActive === item.id ? (
+                                   <div className="zone-texte">
+                                        {item.label === "Équipements" ? <ul></ul> : null}
+                                        <p className="menu-texte">{item.texte}</p>
+                                   </div>
+                              ) : null}
+                         </div>
+                    ))}
+               </div>
           </div>
      )
 }

@@ -11,7 +11,7 @@ function Note({ valeur }) {
      }
      
      return (
-          <div>{etoiles}</div>
+          <div className="note-container">{etoiles}</div>
 
      )
 }

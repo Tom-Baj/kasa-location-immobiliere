@@ -1,11 +1,15 @@
 .note-container {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 
     &__etoile-red {
         color: $red-color;
+        margin-right: 5px;
     }
 
     &__etoile-grey {
         color: $dark-grey-color;
+        margin-right: 5px;
     }
 }
