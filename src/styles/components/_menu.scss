@@ -1,40 +1,71 @@
-.menu-container {
+.menu {
      display: flex;
      justify-content: center;
      align-content: center;
-     flex-direction: column;
-     gap: 30px;
-     width: 80%;
      margin: 30px auto;
-     position: relative;
 
-     .menu-content {
+     &--about {
+          flex-direction: column;
+          width: 80%;
+          gap: 30px;
+          position: relative;
+     }
+
+     &--logement {
+          flex-direction: row;
+          gap: 50px;
+     }
+
+     &__content {
           color: $white-color;
           font-weight: $large;
 
-          .menu-header {
+          &--logement {
+               width: 50%;
+          }
+
+          &--about {
+          }
+
+          &__header {
                display: flex;
                background-color: $red-color;
                flex-direction: row;
                justify-content: space-between;
                align-items: center;
                padding: 0 15px;
-               border-radius: $radius5;
 
-               .icon-fleche {
-                    transition: transform 0.9s;
+               &--about {
+                    border-radius: $radius5;
                }
 
-               .rotate-icon {
+               &--logement {
+                    border-radius: $radius10;
+               }
+
+               &__button {
+                    font-size: 22px;
+               }
+
+               &__icon {
                     transition: transform 0.9s;
-                    transform: rotate(180deg);
+
+                    &--rotate {
+                         transform: rotate(180deg);
+                    }
                }
           }
-          .zone-texte {
+
+          &__text-zone {
                background-color: $grey-color;
                color: $black-color;
                font-weight: $light;
                padding: 10px;
+               animation: fadeIn 0.5s ease-in-out;
+
+               &__list {
+                    list-style-type: none;
+               }
           }
      }
 
@@ -42,6 +73,14 @@
           & {
                width: 100%;
           }
-          
+     }
+}
+
+@keyframes fadeIn {
+     0% {
+          opacity: 0;
+     }
+     100% {
+          opacity: 1;
      }
 }

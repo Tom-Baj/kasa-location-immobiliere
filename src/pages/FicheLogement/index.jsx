@@ -6,19 +6,19 @@ import Menu from '../../components/Menu'
 import logements from '../../assets/data/logements.json'
 
 function FicheLogement() {
-     let { id } = useParams()
-     let logement = logements.find((logement) => logement.id === id)
+    let { id } = useParams()
+    let logement = logements.find((logement) => logement.id === id)
 
-     return (
-          <div id="fiche-logement">
-               <Carrousel logement={logement} />
-               <div className="detail-container">
-                    <Description logement={logement} />
-                    <Host logement={logement} />
-               </div>
-               <Menu items={logement} id="fiche-logement"/>
-          </div>
-     )
+    return (
+        <div id="fiche-logement">
+            <Carrousel logement={logement} />
+            <div className="detail-container">
+                <Description logement={logement} />
+                <Host logement={logement} />
+            </div>
+            <Menu items={logement.dropdown} id="fiche-logement"/>
+        </div>
+    )
 }
 
 export default FicheLogement
