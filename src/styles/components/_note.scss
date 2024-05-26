@@ -1,15 +1,22 @@
 .note-container {
+    margin-top: 5px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    gap: 10px;
+    font-size: 1.4em;
 
-    &__etoile-red {
+    &__etoile--red {
         color: $red-color;
-        margin-right: 5px;
     }
 
-    &__etoile-grey {
+    &__etoile--grey {
         color: $dark-grey-color;
-        margin-right: 5px;
+    }
+
+    @media screen and (max-width: 768px) {
+        & {
+            font-size: 1em;
+            gap: 5px;
+        }
     }
 }

@@ -61,14 +61,31 @@
                display: none;
           }
      }
+}
 
-     @media screen and (max-width: 768px) {
-          .carrousel {
-               height: 255px;
-               &__fleche {
-                    height: 24px;
-                    width: 24px;
-               }
+@media screen and (min-width: 375px) and (max-width: 767px) {
+     .carrousel {
+          height: 255px;
+          &__fleche {
+               height: 24px;
+               width: 24px;
           }
+     }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+     .carrousel {
+          height: 330px;
+          &__fleche {
+               height: 45px;
+               width: 40px;
+          }
+     }
+}
+
+@media screen and (min-width: 1024px) {
+     .carrousel {
+          height: 380px;
+
      }
 }

@@ -1,17 +1,50 @@
 .tags-container {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 15px;
+     display: flex;
+     justify-content: flex-start;
+     margin-top: 15px;
+     gap: 10px;
 
-    &__tag {
-        background-color: $red-color;
-        border-radius: $radius10;
-        color: $white-color;
-        font-size: 14px;
-        font-weight: $large;
-        margin-right: 15px;
-        padding: 5px 2em;
-        width: auto;
-        text-align: center;
+     &__tag {
+          background-color: $red-color;
+          border-radius: $radius10;
+          color: $white-color;
+          font-size: 14px;
+          font-weight: $large;
+          height: 25px;
+          text-align: center;
+          padding: 2px 0;
+          width: 15%;
+     }
+
+    @media screen and (max-width: 1024px) {
+        .tags-container {
+            &__tag {
+                font-size: 13px;
+                height: 22px;
+                width: 20%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .tags-container {
+            &__tag {
+                font-size: 12px;
+                height: 20px;
+                width: 25%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .tags-container {
+            &__tag {
+                font-size: 10px;
+                height: 18px;
+                width: 25%;
+                white-space: nowrap;
+                text-align: center;
+            }
+        }
     }
 }

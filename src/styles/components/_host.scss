@@ -1,13 +1,14 @@
 .host-container {
      display: flex;
-     justify-content: flex-end;
-     align-items: center;
+     justify-content: center;
+     align-items: end;
      flex-direction: column;
      width: 167px;
 
      &__profil {
           display: flex;
           align-items: center;
+          justify-content: flex-end;
 
           &--name {
                color: $red-color;
@@ -20,6 +21,44 @@
           &--photo {
                border-radius: 50%;
                height: 64px;
+          }
+     }
+
+     @media screen and (max-width: 768px){
+          &__profil {
+               &--name {
+                    font-size: 14px;
+                    width: 50%;
+               }
+
+               &--photo {
+                    height: 48px;
+               }
+          }
+          
+     }
+
+     @media screen and (max-width: 600px) {
+          width: 100%;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+          align-items: center;
+          
+     }
+
+     @media screen and (max-width: 425px) {
+          
+
+          &__profil {
+               justify-content: flex-end;
+               &--name {
+                    font-size: 14px;
+                    width: 50%;
+               }
+
+               &--photo {
+                    height: 40px;
+               }
           }
      }
 }
