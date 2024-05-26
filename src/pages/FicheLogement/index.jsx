@@ -8,7 +8,7 @@ import logements from '../../assets/data/logements.json'
 function FicheLogement() {
     let { id } = useParams()
     let logement = logements.find((logement) => logement.id === id)
-    
+    console.log(logement)
 
     return (
         <div id="fiche-logement">
