@@ -1,14 +1,17 @@
-import { useParams } from 'react-router-dom'
-import Carrousel from '../../components/Carrousel'
-import Description from '../../components/Description'
-import Host from '../../components/Host'
-import Menu from '../../components/Menu'
-import logements from '../../assets/data/logements.json'
+import { useParams, Navigate } from 'react-router-dom';
+import Carrousel from '../../components/Carrousel';
+import Description from '../../components/Description';
+import Host from '../../components/Host';
+import Menu from '../../components/Menu';
+import logements from '../../assets/data/logements.json';
 
 function FicheLogement() {
-    let { id } = useParams()
-    let logement = logements.find((logement) => logement.id === id)
-    console.log(logement)
+    let { id } = useParams();
+    let logement = logements.find((logement) => logement.id === id);
+
+    if (!logement) {
+        return <Navigate to="../error/" />;
+    }
 
     return (
         <div id="fiche-logement">
@@ -17,9 +20,9 @@ function FicheLogement() {
                 <Description logement={logement} />
                 <Host logement={logement} />
             </div>
-            <Menu items={logement.dropdown} id="fiche-logement"/>
+            <Menu items={logement.dropdown} id="fiche-logement" />
         </div>
-    )
+    );
 }
 
-export default FicheLogement
+export default FicheLogement;

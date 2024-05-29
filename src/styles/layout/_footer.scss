@@ -13,5 +13,10 @@
 
      &__texte {
           margin-bottom: 2.5rem;
+
+          @media screen and (max-width: 600px) {
+               width: 40%;
+               text-align: center;
+          }
      }
 }
