@@ -14,38 +14,58 @@
           text-align: center;
           padding: 2px 10px;
           min-width: 150px;
-        }
+     }
 
-    @media screen and (max-width: 1024px) {
-        .tags-container {
-            &__tag {
-                font-size: 13px;
-                height: 22px;
-                min-width: 150px;
+        @media screen and (max-width: 1110px) {
+            .tags-container {
+                &__tag {
+                        font-size: 13px;
+                        height: 22px;
+                        min-width: calc(140px - 20px);
+                }
             }
         }
-    }
 
-    @media screen and (max-width: 768px) {
-        .tags-container {
-            &__tag {
-                font-size: 12px;
-                height: 20px;
-                min-width: 120px;
+     @media screen and (max-width: 1024px) {
+          .tags-container {
+               &__tag {
+                    font-size: 13px;
+                    height: 22px;
+                    min-width: calc(130px - 20px);
+               }
+          }
+     }
+
+     @media screen and (max-width: 768px) {
+          .tags-container {
+               &__tag {
+                    font-size: 12px;
+                    height: 20px;
+                    min-width: calc(120px - 20px);
+               }
+          }
+     }
+
+     @media screen and (max-width: 480px) {
+          .tags-container {
+               &__tag {
+
+                    margin-bottom: 10px;
+                    font-size: 10px;
+                    height: 18px;
+                    text-align: center;
+                    min-width: calc(100px - 25px);
+               }
+          }
+     }
+
+        @media screen and (max-width: 374px) {
+            .tags-container {
+                &__tag {
+                        font-size: 9px;
+                        height: 16px;
+                        min-width: calc(90px - 25px);
+                }
             }
         }
-    }
-
-    @media screen and (max-width: 480px) {
-        .tags-container {
-            &__tag {
-                margin-bottom: 10px;
-                font-size: 10px;
-                height: 18px;
-                min-width: 100px;
-                white-space: nowrap;
-                text-align: center;
-            }
-        }
-    }
 }
